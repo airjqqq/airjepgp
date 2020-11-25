@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Airj EPGP</title>
+    <!--table-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/buttons/1.6.0/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/rowgroup/1.1.1/js/dataTables.rowGroup.min.js"></script>
+    <!--wowhead-->
+    <script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+    <script src="https://wow.zamimg.com/widgets/power.js"></script>
+
+
+    <style>
+               .HUNTER {
+            background-color: #aad372;
+        }
+                .WARRIOR {
+            background-color: #c69b6d;
+        }
+                .ROGUE {
+            background-color: #fff468;
+        }
+                .MAGE {
+            background-color: #3fc6ea;
+        }
+                .PRIEST {
+            background-color: #ffffff;
+        }
+                .WARLOCK {
+            background-color: #8787ed;
+        }
+                .DRUID {
+            background-color: #ff7c0a;
+        }
+                .PALADIN {
+            background-color: #f48cba;
+        }
+                .SHAMAN {
+            background-color: #f48cba;
+        }
+                .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+
+
+    <H1> Airj EPGP</H1>
+
+    <H5> 更新时间:2020-11-26 01:40 </H5>
+
+    <div class="tab">
+        <button class="tablinks" onclick="selectTab(event, 'PointsTab')">Points</button>
+        <button class="tablinks" onclick="selectTab(event, 'LogsTab')">Logs</button>
+    </div>
+        <div id="PointsTab" class="tabcontent">
+            <p> 最小EP: 600, 基础GP: 2500, 衰减比例: 15%, 待命分数比例: 100%</p>
+            <table id="pointsTable" class="display" style="width:100%">
+            <thead>
+            <tr>
+                <th>名字</th>
+                <th>职业</th>
+                <th>出勤率</th>
+                <th>EP</th>
+                <th>GP</th>
+                <th>PR</th>
+                <th>优先级</th>
+            </tr>
+            </thead>
+        <tr><td class="WARRIOR">砖制牛兽</td><td>战士</td><td>97.98%</td><td>852.65</td><td>0.00</td><td>0.331</td><td>1</td></tr>
+        <tr><td class="WARLOCK">修罗炼狱</td><td>术士</td><td>96.72%</td><td>841.70</td><td>1.08</td><td>0.331</td><td>2</td></tr>
+        <tr><td class="WARRIOR">龙泡泡</td><td>战士</td><td>92.13%</td><td>801.78</td><td>0.00</td><td>0.321</td><td>3</td></tr>
+        <tr><td class="WARRIOR">克鲁斯王</td><td>战士</td><td>99.91%</td><td>869.52</td><td>139.84</td><td>0.313</td><td>4</td></tr>
+        <tr><td class="PRIEST">清空购物车</td><td>牧师</td><td>90.83%</td><td>790.46</td><td>26.41</td><td>0.313</td><td>5</td></tr>
+        <tr><td class="PRIEST">天禧</td><td>牧师</td><td>89.01%</td><td>774.58</td><td>0.00</td><td>0.310</td><td>6</td></tr>
+        <tr><td class="MAGE">疯狂的厄运</td><td>法师</td><td>100.00%</td><td>870.26</td><td>209.62</td><td>0.305</td><td>7</td></tr>
+        <tr><td class="WARRIOR">Weaving</td><td>战士</td><td>87.06%</td><td>757.67</td><td>0.00</td><td>0.303</td><td>8</td></tr>
+        <tr><td class="ROGUE">沙雕新之助</td><td>潜行者</td><td>93.06%</td><td>809.90</td><td>324.30</td><td>0.287</td><td>9</td></tr>
+        <tr><td class="PALADIN">圣光大闸蟹</td><td>圣骑士</td><td>82.31%</td><td>716.35</td><td>0.00</td><td>0.287</td><td>10</td></tr>
+        <tr><td class="MAGE">南风向南</td><td>法师</td><td>93.46%</td><td>813.33</td><td>392.49</td><td>0.281</td><td>11</td></tr>
+        <tr><td class="HUNTER">风之暗语</td><td>猎人</td><td>91.42%</td><td>795.62</td><td>411.97</td><td>0.273</td><td>12</td></tr>
+        <tr><td class="MAGE">破乄冰</td><td>法师</td><td>89.15%</td><td>775.84</td><td>347.49</td><td>0.272</td><td>13</td></tr>
+        <tr><td class="WARRIOR">冰镇咖啡</td><td>战士</td><td>99.91%</td><td>869.51</td><td>613.21</td><td>0.266</td><td>14</td></tr>
+        <tr><td class="ROGUE">舞动精灵</td><td>潜行者</td><td>98.92%</td><td>860.90</td><td>640.63</td><td>0.263</td><td>15</td></tr>
+        <tr><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>97.89%</td><td>851.93</td><td>665.74</td><td>0.261</td><td>16</td></tr>
+        <tr><td class="DRUID">卑微小德</td><td>德鲁伊</td><td>73.50%</td><td>639.64</td><td>0.00</td><td>0.256</td><td>17</td></tr>
+        <tr><td class="MAGE">叶月类</td><td>法师</td><td>99.91%</td><td>869.47</td><td>808.16</td><td>0.250</td><td>18</td></tr>
+        <tr><td class="PRIEST">流风回雪</td><td>牧师</td><td>83.24%</td><td>724.42</td><td>415.79</td><td>0.248</td><td>19</td></tr>
+        <tr><td class="PRIEST">大竹峰老七</td><td>牧师</td><td>76.37%</td><td>664.59</td><td>237.69</td><td>0.243</td><td>20</td></tr>
+        <tr><td class="PRIEST">铁杆汉</td><td>牧师</td><td>75.96%</td><td>661.03</td><td>239.51</td><td>0.241</td><td>21</td></tr>
+        <tr><td class="WARLOCK">恐惧出门</td><td>术士</td><td>78.30%</td><td>681.39</td><td>351.12</td><td>0.239</td><td>22</td></tr>
+        <tr><td class="WARRIOR">Airior</td><td>战士</td><td>99.96%</td><td>869.88</td><td>1006.44</td><td>0.236</td><td>23</td></tr>
+        <tr><td class="MAGE">大秦法神</td><td>法师</td><td>89.40%</td><td>777.99</td><td>807.81</td><td>0.235</td><td>24</td></tr>
+        <tr><td class="WARLOCK">朗拿度</td><td>术士</td><td>89.15%</td><td>775.85</td><td>799.45</td><td>0.235</td><td>25</td></tr>
+        <tr><td class="ROGUE">风之剑</td><td>潜行者</td><td>91.16%</td><td>793.35</td><td>930.00</td><td>0.231</td><td>26</td></tr>
+        <tr><td class="PRIEST">Airdaddy</td><td>牧师</td><td>73.99%</td><td>643.92</td><td>349.64</td><td>0.226</td><td>27</td></tr>
+        <tr><td class="PALADIN">Threecats</td><td>圣骑士</td><td>70.39%</td><td>612.59</td><td>213.53</td><td>0.226</td><td>28</td></tr>
+        <tr><td class="DRUID">咪哩嘛哩变</td><td>德鲁伊</td><td>72.96%</td><td>634.94</td><td>359.56</td><td>0.222</td><td>29</td></tr>
+        <tr><td class="PRIEST">索罗斯铜须</td><td>牧师</td><td>88.50%</td><td>770.15</td><td>1011.80</td><td>0.219</td><td>30</td></tr>
+        <tr><td class="WARRIOR">老军医夏雨荷</td><td>战士</td><td>94.86%</td><td>825.53</td><td>1285.83</td><td>0.218</td><td>31</td></tr>
+        <tr><td class="ROGUE">咔咪啦</td><td>潜行者</td><td>97.27%</td><td>846.47</td><td>1299.49</td><td>0.218</td><td>32</td></tr>
+        <tr><td class="ROGUE">锻造</td><td>潜行者</td><td>87.31%</td><td>759.86</td><td>1060.39</td><td>0.213</td><td>33</td></tr>
+        <tr><td class="ROGUE">鴻霄昊胤</td><td>潜行者</td><td>84.22%</td><td>732.97</td><td>968.25</td><td>0.211</td><td>34</td></tr>
+        <tr><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>78.54%</td><td>683.50</td><td>1206.75</td><td>0.184</td><td>35</td></tr>
+        <tr><td class="PALADIN">五月初一</td><td>圣骑士</td><td>68.88%</td><td>599.42</td><td>264.44</td><td>0.217</td><td>36</td></tr>
+        <tr><td class="MAGE">樊梨花</td><td>法师</td><td>58.85%</td><td>512.16</td><td>119.45</td><td>0.196</td><td>37</td></tr>
+        <tr><td class="WARRIOR">星辰雨蝶</td><td>战士</td><td>57.18%</td><td>497.62</td><td>96.92</td><td>0.192</td><td>38</td></tr>
+        <tr><td class="PALADIN">萌萌姐姐</td><td>圣骑士</td><td>46.37%</td><td>403.57</td><td>0.00</td><td>0.161</td><td>39</td></tr>
+        <tr><td class="DRUID">大秦霸主</td><td>德鲁伊</td><td>50.94%</td><td>443.33</td><td>700.50</td><td>0.139</td><td>40</td></tr>
+        <tr><td class="WARRIOR">傷丨</td><td>战士</td><td>33.58%</td><td>292.23</td><td>0.00</td><td>0.117</td><td>41</td></tr>
+        <tr><td class="PRIEST">人生短短</td><td>牧师</td><td>38.46%</td><td>334.74</td><td>471.65</td><td>0.113</td><td>42</td></tr>
+        <tr><td class="PRIEST">会飞的熊猫猪</td><td>牧师</td><td>32.31%</td><td>281.22</td><td>0.00</td><td>0.112</td><td>43</td></tr>
+        <tr><td class="HUNTER">库存一</td><td>猎人</td><td>30.24%</td><td>263.19</td><td>200.00</td><td>0.097</td><td>44</td></tr>
+        <tr><td class="PALADIN">人生无限</td><td>圣骑士</td><td>26.13%</td><td>227.43</td><td>0.00</td><td>0.091</td><td>45</td></tr>
+        <tr><td class="WARRIOR">佩琪与乔治</td><td>战士</td><td>23.84%</td><td>207.50</td><td>0.00</td><td>0.083</td><td>46</td></tr>
+        <tr><td class="WARLOCK">小胖爸爸</td><td>术士</td><td>13.29%</td><td>115.69</td><td>0.00</td><td>0.046</td><td>47</td></tr>
+        <tr><td class="WARLOCK">Airock</td><td>术士</td><td>11.90%</td><td>103.60</td><td>0.00</td><td>0.041</td><td>48</td></tr>
+        <tr><td class="HUNTER">鬼匿猫</td><td>猎人</td><td>11.29%</td><td>98.26</td><td>0.00</td><td>0.039</td><td>49</td></tr>
+        <tr><td class="PRIEST">头孢配小烧</td><td>牧师</td><td>11.08%</td><td>96.46</td><td>0.00</td><td>0.039</td><td>50</td></tr>
+        <tr><td class="PRIEST">一个小牧</td><td>牧师</td><td>9.55%</td><td>83.12</td><td>0.00</td><td>0.033</td><td>51</td></tr>
+        <tr><td class="PRIEST">饭团滚来滚去</td><td>牧师</td><td>9.44%</td><td>82.12</td><td>0.00</td><td>0.033</td><td>52</td></tr>
+        <tr><td class="ROGUE">西貮路梁朝伟</td><td>潜行者</td><td>7.79%</td><td>67.84</td><td>0.00</td><td>0.027</td><td>53</td></tr>
+        <tr><td class="ROGUE">Airue</td><td>潜行者</td><td>7.47%</td><td>64.98</td><td>0.00</td><td>0.026</td><td>54</td></tr>
+        <tr><td class="WARRIOR">终极梦想</td><td>战士</td><td>5.07%</td><td>44.15</td><td>0.00</td><td>0.018</td><td>55</td></tr>
+        <tr><td class="PALADIN">Audi</td><td>圣骑士</td><td>3.00%</td><td>26.09</td><td>0.00</td><td>0.010</td><td>56</td></tr>
+        <tr><td class="WARLOCK">暗神波塞西</td><td>术士</td><td>2.59%</td><td>22.51</td><td>0.00</td><td>0.009</td><td>57</td></tr>
+        <tr><td class="UNKNOWN">Skycitydarks</td><td>unknown</td><td>2.26%</td><td>19.65</td><td>0.00</td><td>0.008</td><td>58</td></tr>
+        <tr><td class="MAGE">人生尽头</td><td>法师</td><td>2.26%</td><td>19.65</td><td>0.00</td><td>0.008</td><td>59</td></tr>
+        <tr><td class="WARLOCK">帝国元帅</td><td>术士</td><td>1.90%</td><td>16.50</td><td>0.00</td><td>0.007</td><td>60</td></tr>
+        <tr><td class="ROGUE">可乐果</td><td>潜行者</td><td>1.56%</td><td>13.61</td><td>0.00</td><td>0.005</td><td>61</td></tr>
+        <tr><td class="PRIEST">面对恐惧</td><td>牧师</td><td>1.52%</td><td>13.21</td><td>0.00</td><td>0.005</td><td>62</td></tr>
+        <tr><td class="HUNTER">凌云逐风</td><td>猎人</td><td>1.47%</td><td>12.82</td><td>0.00</td><td>0.005</td><td>63</td></tr>
+        <tr><td class="HUNTER">北鼻欧耶</td><td>猎人</td><td>1.33%</td><td>11.54</td><td>0.00</td><td>0.005</td><td>64</td></tr>
+        <tr><td class="HUNTER">兽群之王</td><td>猎人</td><td>1.33%</td><td>11.54</td><td>0.00</td><td>0.005</td><td>65</td></tr>
+        <tr><td class="WARRIOR">一战帅一</td><td>战士</td><td>1.22%</td><td>10.66</td><td>0.00</td><td>0.004</td><td>66</td></tr>
+        <tr><td class="HUNTER">星坠</td><td>猎人</td><td>1.22%</td><td>10.65</td><td>0.00</td><td>0.004</td><td>67</td></tr>
+        <tr><td class="HUNTER">秘书长</td><td>猎人</td><td>0.84%</td><td>7.31</td><td>0.00</td><td>0.003</td><td>68</td></tr>
+                    <tfoot>
+            <tr>
+                <th>名字</th>
+                <th>职业</th>
+                <th>出勤率</th>
+                <th>EP</th>
+                <th>GP</th>
+                <th>PR</th>
+                <th>优先级</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+        <div id="LogsTab" class="tabcontent">
+        <table id="logsTable" class="display" style="width:100%">
+            <thead>
+            <tr>
+                <th>时间</th>
+                <th>名字</th>
+                <th>职业</th>
+                <th>物品GP</th>
+                <th>获得GP</th>
+                <th>装备</th>
+            </tr>
+            </thead>
+        <tr><td>2020-11-25 23:58</td><td class="PRIEST">人生短短</td><td>牧师</td><td>150.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=16913/">16913 灵风手套</a></td></tr>
+<tr><td>2020-11-25 23:57</td><td class="PRIEST">人生短短</td><td>牧师</td><td>93.00</td><td>466.50</td><td><a href="https://cn.classic.wowhead.com/item=19430/">19430 纯净思想斗篷</a></td></tr>
+<tr><td>2020-11-25 23:57</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>244.00</td><td>609.25</td><td><a href="https://cn.classic.wowhead.com/item=19381/">19381 暗影烈焰长靴</a></td></tr>
+<tr><td>2020-11-25 23:57</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>162.00</td><td>406.25</td><td><a href="https://cn.classic.wowhead.com/item=19377/">19377 普瑞斯托的阴谋饰物</a></td></tr>
+<tr><td>2020-11-25 23:56</td><td class="PRIEST">人生短短</td><td>牧师</td><td>200.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=16923/">16923 卓越法袍</a></td></tr>
+<tr><td>2020-11-25 23:08</td><td class="MAGE">南风向南</td><td>法师</td><td>93.00</td><td>466.50</td><td><a href="https://cn.classic.wowhead.com/item=19374/">19374 奥术精准护腕</a></td></tr>
+<tr><td>2020-11-25 22:34</td><td class="WARLOCK">恐惧出门</td><td>术士</td><td>800.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=21603/">21603 其拉贵族魔杖</a></td></tr>
+<tr><td>2020-11-25 22:23</td><td class="MAGE">大秦法神</td><td>法师</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20933/">20933 上古之神的外鞘</a></td></tr>
+<tr><td>2020-11-25 22:22</td><td class="HUNTER">库存一</td><td>猎人</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20929/">20929 上古之神的甲壳</a></td></tr>
+<tr><td>2020-11-25 22:22</td><td class="WARRIOR">Airior</td><td>战士</td><td>1200.00</td><td>6000.00</td><td><a href="https://cn.classic.wowhead.com/item=21221/">21221 克苏恩之眼</a></td></tr>
+<tr><td>2020-11-25 22:21</td><td class="PRIEST">Airdaddy</td><td>牧师</td><td>224.00</td><td>2240.00</td><td><a href="https://cn.classic.wowhead.com/item=21583/">21583 明晰披风</a></td></tr>
+<tr><td>2020-11-25 22:21</td><td class="ROGUE">咔咪啦</td><td>潜行者</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21586/">21586 无尽痛苦腰带</a></td></tr>
+<tr><td>2020-11-25 00:44</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>400.00</td><td>4000.00</td><td><a href="https://cn.classic.wowhead.com/item=21615/">21615 瑞格贝托的帽子</a></td></tr>
+<tr><td>2020-11-25 00:42</td><td class="ROGUE">鴻霄昊胤</td><td>潜行者</td><td>4000.00</td><td>4000.00</td><td><a href="https://cn.classic.wowhead.com/item=20927/">20927 奥罗的外皮</a></td></tr>
+<tr><td>2020-11-25 00:42</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>600.00</td><td>3000.00</td><td><a href="https://cn.classic.wowhead.com/item=21237/">21237 其拉帝王徽记</a></td></tr>
+<tr><td>2020-11-24 23:51</td><td class="ROGUE">锻造</td><td>潜行者</td><td>224.00</td><td>1120.00</td><td><a href="https://cn.classic.wowhead.com/item=21602/">21602 其拉死刑护腕</a></td></tr>
+<tr><td>2020-11-24 23:51</td><td class="ROGUE">锻造</td><td>潜行者</td><td>4000.00</td><td>4000.00</td><td><a href="https://cn.classic.wowhead.com/item=21232/">21232 其拉帝王武器</a></td></tr>
+<tr><td>2020-11-24 23:51</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>448.00</td><td>4480.00</td><td><a href="https://cn.classic.wowhead.com/item=21604/">21604 皇家救赎腕轮</a></td></tr>
+<tr><td>2020-11-24 23:10</td><td class="PRIEST">人生短短</td><td>牧师</td><td>300.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=21619/">21619 救世者手套</a></td></tr>
+<tr><td>2020-11-24 23:09</td><td class="PRIEST">流风回雪</td><td>牧师</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-11-24 22:38</td><td class="ROGUE">锻造</td><td>潜行者</td><td>500.00</td><td>2500.00</td><td><a href="https://cn.classic.wowhead.com/item=21670/">21670 虫群卫士徽章</a></td></tr>
+<tr><td>2020-11-19 00:02</td><td class="HUNTER">风之暗语</td><td>猎人</td><td>500.00</td><td>1250.00</td><td><a href="https://cn.classic.wowhead.com/item=21685/">21685 石化甲虫</a></td></tr>
+<tr><td>2020-11-19 00:02</td><td class="WARRIOR">老军医夏雨荷</td><td>战士</td><td>224.00</td><td>560.00</td><td><a href="https://cn.classic.wowhead.com/item=21695/">21695 安格莉丝塔的触摸</a></td></tr>
+<tr><td>2020-11-18 23:40</td><td class="PRIEST">Airdaddy</td><td>牧师</td><td>500.00</td><td>2537.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-11-18 23:40</td><td class="MAGE">小灰浪</td><td>法师</td><td>500.00</td><td>-2537.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-11-18 23:35</td><td class="PRIEST">天禧</td><td>牧师</td><td>181.90</td><td>454.75</td><td><a href="https://cn.classic.wowhead.com/item=19003/">19003 奈法利安的头颅</a></td></tr>
+<tr><td>2020-11-18 23:24</td><td class="WARRIOR">冰镇咖啡</td><td>战士</td><td>161.00</td><td>1608.00</td><td><a href="https://cn.classic.wowhead.com/item=19349/">19349 源质壁垒</a></td></tr>
+<tr><td>2020-11-18 23:19</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>93.00</td><td>466.50</td><td><a href="https://cn.classic.wowhead.com/item=19430/">19430 纯净思想斗篷</a></td></tr>
+<tr><td>2020-11-18 23:07</td><td class="HUNTER">库存一</td><td>猎人</td><td>100.00</td><td>500.00</td><td><a href="https://cn.classic.wowhead.com/item=16935/">16935 巨龙追猎者护腕</a></td></tr>
+<tr><td>2020-11-18 23:07</td><td class="WARRIOR">Weaving</td><td>战士</td><td>300.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=19341/">19341 生命宝石</a></td></tr>
+<tr><td>2020-11-18 23:06</td><td class="WARRIOR">Weaving</td><td>战士</td><td>47.00</td><td>116.75</td><td><a href="https://cn.classic.wowhead.com/item=19368/">19368 龙息手持火炮</a></td></tr>
+<tr><td>2020-11-18 00:02</td><td class="ROGUE">风之剑</td><td>潜行者</td><td>500.00</td><td>9000.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-11-18 00:00</td><td class="PALADIN">五月初一</td><td>圣骑士</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20929/">20929 上古之神的甲壳</a></td></tr>
+<tr><td>2020-11-18 00:00</td><td class="ROGUE">风之剑</td><td>潜行者</td><td>1200.00</td><td>3000.00</td><td><a href="https://cn.classic.wowhead.com/item=21586/">21586 无尽痛苦腰带</a></td></tr>
+<tr><td>2020-11-18 00:00</td><td class="PRIEST">索罗斯铜须</td><td>牧师</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21582/">21582 上古之神的拥抱</a></td></tr>
+<tr><td>2020-11-18 00:00</td><td class="WARRIOR">老军医夏雨荷</td><td>战士</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21221/">21221 克苏恩之眼</a></td></tr>
+<tr><td>2020-11-17 23:43</td><td class="ROGUE">沙雕新之助</td><td>潜行者</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20927/">20927 奥罗的外皮</a></td></tr>
+<tr><td>2020-11-17 23:43</td><td class="PALADIN">五月初一</td><td>圣骑士</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20931/">20931 巨型沙虫的皮</a></td></tr>
+<tr><td>2020-11-17 23:43</td><td class="HUNTER">风之暗语</td><td>猎人</td><td>400.00</td><td>4000.00</td><td><a href="https://cn.classic.wowhead.com/item=23557/">23557 巨虫的幼体</a></td></tr>
+<tr><td>2020-11-17 23:19</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>224.00</td><td>1120.00</td><td><a href="https://cn.classic.wowhead.com/item=21601/">21601 维克洛尔大帝之戒</a></td></tr>
+<tr><td>2020-11-17 22:48</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-11-17 22:48</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>224.00</td><td>1120.00</td><td><a href="https://cn.classic.wowhead.com/item=21621/">21621 金巢披风</a></td></tr>
+<tr><td>2020-11-17 22:34</td><td class="WARRIOR">老军医夏雨荷</td><td>战士</td><td>500.00</td><td>1250.00</td><td><a href="https://cn.classic.wowhead.com/item=21647/">21647 沙漠掠夺者塑像</a></td></tr>
+<tr><td>2020-11-17 22:29</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>300.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=21674/">21674 坚定信念护手</a></td></tr>
+<tr><td>2020-11-12 00:08</td><td class="PRIEST">天禧</td><td>牧师</td><td>500.00</td><td>-5000.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-11-12 00:08</td><td class="PRIEST">天禧</td><td>牧师</td><td>500.00</td><td>5000.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-11-12 00:06</td><td class="PRIEST">天禧</td><td>牧师</td><td>500.00</td><td>1250.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-11-12 00:06</td><td class="ROGUE">鴻霄昊胤</td><td>潜行者</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-11-11 23:55</td><td class="MAGE">叶月类</td><td>法师</td><td>800.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=21603/">21603 其拉贵族魔杖</a></td></tr>
+<tr><td>2020-11-11 23:55</td><td class="PRIEST">天禧</td><td>牧师</td><td>800.00</td><td>-2000.00</td><td><a href="https://cn.classic.wowhead.com/item=21603/">21603 其拉贵族魔杖</a></td></tr>
+<tr><td>2020-11-11 23:54</td><td class="PRIEST">天禧</td><td>牧师</td><td>800.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=21603/">21603 其拉贵族魔杖</a></td></tr>
+<tr><td>2020-11-11 23:43</td><td class="WARRIOR">Airior</td><td>战士</td><td>424.00</td><td>2828.50</td><td><a href="https://cn.classic.wowhead.com/item=19364/">19364 阿什坎迪，兄弟会之剑</a></td></tr>
+<tr><td>2020-11-11 23:35</td><td class="PRIEST">大竹峰老七</td><td>牧师</td><td>181.90</td><td>909.50</td><td><a href="https://cn.classic.wowhead.com/item=19003/">19003 奈法利安的头颅</a></td></tr>
+<tr><td>2020-11-11 23:35</td><td class="PALADIN">圣光大闸蟹</td><td>圣骑士</td><td>325.00</td><td>1624.50</td><td><a href="https://cn.classic.wowhead.com/item=19375/">19375 密苏达尔，夺魂者的头饰</a></td></tr>
+<tr><td>2020-11-11 23:24</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>161.00</td><td>402.00</td><td><a href="https://cn.classic.wowhead.com/item=19387/">19387 多彩长靴</a></td></tr>
+<tr><td>2020-11-11 23:12</td><td class="PRIEST">大竹峰老七</td><td>牧师</td><td>93.00</td><td>1045.00</td><td><a href="https://cn.classic.wowhead.com/item=19430/">19430 纯净思想斗篷</a></td></tr>
+<tr><td>2020-11-11 23:12</td><td class="WARRIOR">Airior</td><td>战士</td><td>466.60</td><td>4666.00</td><td><a href="https://cn.classic.wowhead.com/item=19406/">19406 龙牙饰物</a></td></tr>
+<tr><td>2020-11-11 22:55</td><td class="ROGUE">锻造</td><td>潜行者</td><td>93.00</td><td>261.25</td><td><a href="https://cn.classic.wowhead.com/item=19398/">19398 火喉披风</a></td></tr>
+<tr><td>2020-11-11 22:47</td><td class="PRIEST">大竹峰老七</td><td>牧师</td><td>87.00</td><td>243.75</td><td><a href="https://cn.classic.wowhead.com/item=19371/">19371 龙魂坠饰</a></td></tr>
+<tr><td>2020-11-11 22:45</td><td class="ROGUE">鴻霄昊胤</td><td>潜行者</td><td>300.00</td><td>625.00</td><td><a href="https://cn.classic.wowhead.com/item=19342/">19342 毒性图腾</a></td></tr>
+<tr><td>2020-11-11 00:10</td><td class="HUNTER">风之暗语</td><td>猎人</td><td>4000.00</td><td>1830.00</td><td><a href="https://cn.classic.wowhead.com/item=21232/">21232 其拉帝王武器</a></td></tr>
+<tr><td>2020-11-11 00:05</td><td class="WARRIOR">龙泡泡</td><td>战士</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20929/">20929 上古之神的甲壳</a></td></tr>
+<tr><td>2020-11-11 00:04</td><td class="DRUID">大秦霸主</td><td>德鲁伊</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21221/">21221 克苏恩之眼</a></td></tr>
+<tr><td>2020-11-11 00:04</td><td class="WARLOCK">朗拿度</td><td>术士</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21585/">21585 黑暗风暴护手</a></td></tr>
+<tr><td>2020-11-11 00:04</td><td class="WARRIOR">克鲁斯王</td><td>战士</td><td>448.00</td><td>2240.00</td><td><a href="https://cn.classic.wowhead.com/item=22732/">22732 克苏恩的印记</a></td></tr>
+<tr><td>2020-11-10 23:52</td><td class="PALADIN">Threecats</td><td>圣骑士</td><td>800.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=21679/">21679 卡利姆多的复仇</a></td></tr>
+<tr><td>2020-11-10 23:46</td><td class="PRIEST">流风回雪</td><td>牧师</td><td>224.00</td><td>560.00</td><td><a href="https://cn.classic.wowhead.com/item=21611/">21611 掘地虫护腕</a></td></tr>
+<tr><td>2020-11-10 23:46</td><td class="WARLOCK">恐惧出门</td><td>术士</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20931/">20931 巨型沙虫的皮</a></td></tr>
+<tr><td>2020-11-10 23:46</td><td class="PRIEST">流风回雪</td><td>牧师</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20927/">20927 奥罗的外皮</a></td></tr>
+<tr><td>2020-11-10 23:10</td><td class="PALADIN">五月初一</td><td>圣骑士</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20930/">20930 维克洛尔的王冠</a></td></tr>
+<tr><td>2020-11-10 23:09</td><td class="DRUID">咪哩嘛哩变</td><td>德鲁伊</td><td>224.00</td><td>2240.00</td><td><a href="https://cn.classic.wowhead.com/item=21602/">21602 其拉死刑护腕</a></td></tr>
+<tr><td>2020-11-10 22:42</td><td class="PALADIN">五月初一</td><td>圣骑士</td><td>3000.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=20932/">20932 其拉统御腕轮</a></td></tr>
+<tr><td>2020-11-10 22:42</td><td class="WARRIOR">冰镇咖啡</td><td>战士</td><td>3000.00</td><td>3000.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-11-10 22:41</td><td class="MAGE">破乄冰</td><td>法师</td><td>400.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=21676/">21676 腐烂虫群护腿</a></td></tr>
+<tr><td>2020-11-10 22:41</td><td class="WARRIOR">克鲁斯王</td><td>战士</td><td>400.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=21814/">21814 灭绝胸甲</a></td></tr>
+<tr><td>2020-11-05 02:22</td><td class="WARRIOR">Airior</td><td>战士</td><td>224.00</td><td>-1120.00</td><td><a href="https://cn.classic.wowhead.com/item=21664/">21664 尖刺颈饰</a></td></tr>
+<tr><td>2020-11-05 01:06</td><td class="MAGE">破乄冰</td><td>法师</td><td>200.00</td><td>500.00</td><td><a href="https://cn.classic.wowhead.com/item=16916/">16916 灵风长袍</a></td></tr>
+<tr><td>2020-11-05 00:12</td><td class="PALADIN">五月初一</td><td>圣骑士</td><td>325.00</td><td>3249.00</td><td><a href="https://cn.classic.wowhead.com/item=19375/">19375 密苏达尔，夺魂者的头饰</a></td></tr>
+<tr><td>2020-11-05 00:12</td><td class="MAGE">南风向南</td><td>法师</td><td>812.20</td><td>8122.00</td><td><a href="https://cn.classic.wowhead.com/item=19379/">19379 奈萨里奥之泪</a></td></tr>
+<tr><td>2020-11-04 23:55</td><td class="WARRIOR">砖制牛兽</td><td>战士</td><td>280.00</td><td>583.25</td><td><a href="https://cn.classic.wowhead.com/item=19431/">19431 斯泰林的甲虫壳</a></td></tr>
+<tr><td>2020-11-04 23:55</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>280.00</td><td>933.00</td><td><a href="https://cn.classic.wowhead.com/item=19355/">19355 暗影之翼</a></td></tr>
+<tr><td>2020-11-04 23:23</td><td class="MAGE">破乄冰</td><td>法师</td><td>100.00</td><td>280.00</td><td><a href="https://cn.classic.wowhead.com/item=16918/">16918 灵风束腕</a></td></tr>
+<tr><td>2020-11-04 23:23</td><td class="PRIEST">天禧</td><td>牧师</td><td>150.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=16925/">16925 卓越腰带</a></td></tr>
+<tr><td>2020-11-04 23:23</td><td class="PRIEST">天禧</td><td>牧师</td><td>150.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=16919/">16919 卓越长靴</a></td></tr>
+<tr><td>2020-11-04 23:23</td><td class="WARRIOR">冰镇咖啡</td><td>战士</td><td>0.00</td><td>0.00</td><td><a href="https://cn.classic.wowhead.com/item=20383/">20383 勒什雷尔的头颅</a></td></tr>
+<tr><td>2020-11-04 23:23</td><td class="MAGE">樊梨花</td><td>法师</td><td>93.00</td><td>1045.00</td><td><a href="https://cn.classic.wowhead.com/item=19374/">19374 奥术精准护腕</a></td></tr>
+<tr><td>2020-11-04 23:18</td><td class="MAGE">樊梨花</td><td>法师</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20933/">20933 上古之神的外鞘</a></td></tr>
+<tr><td>2020-11-04 22:30</td><td class="MAGE">叶月类</td><td>法师</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21221/">21221 克苏恩之眼</a></td></tr>
+<tr><td>2020-11-04 22:30</td><td class="ROGUE">鴻霄昊胤</td><td>潜行者</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20929/">20929 上古之神的甲壳</a></td></tr>
+<tr><td>2020-11-04 22:30</td><td class="WARRIOR">冰镇咖啡</td><td>战士</td><td>800.00</td><td>8000.00</td><td><a href="https://cn.classic.wowhead.com/item=21134/">21134 疯狂黑暗之刃</a></td></tr>
+<tr><td>2020-11-04 22:30</td><td class="MAGE">大秦法神</td><td>法师</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21585/">21585 黑暗风暴护手</a></td></tr>
+<tr><td>2020-11-04 00:03</td><td class="WARRIOR">铁钾依然在</td><td>战士</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20927/">20927 奥罗的外皮</a></td></tr>
+<tr><td>2020-11-03 22:59</td><td class="PRIEST">流风回雪</td><td>牧师</td><td>224.00</td><td>560.00</td><td><a href="https://cn.classic.wowhead.com/item=21707/">21707 风暴思绪之戒</a></td></tr>
+<tr><td>2020-11-03 22:59</td><td class="MAGE">破乄冰</td><td>法师</td><td>400.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=21676/">21676 腐烂虫群护腿</a></td></tr>
+<tr><td>2020-11-03 22:59</td><td class="WARRIOR">Airior</td><td>战士</td><td>224.00</td><td>1120.00</td><td><a href="https://cn.classic.wowhead.com/item=21664/">21664 尖刺颈饰</a></td></tr>
+<tr><td>2020-11-03 22:59</td><td class="WARRIOR">铁战狂狮</td><td>战士</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-11-03 22:58</td><td class="ROGUE">风之剑</td><td>潜行者</td><td>800.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=21616/">21616 哈霍兰之刺</a></td></tr>
+<tr><td>2020-10-28 22:52</td><td class="WARRIOR">星辰雨蝶</td><td>战士</td><td>4000.00</td><td>4000.00</td><td><a href="https://cn.classic.wowhead.com/item=20929/">20929 上古之神的甲壳</a></td></tr>
+<tr><td>2020-10-28 22:52</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20933/">20933 上古之神的外鞘</a></td></tr>
+<tr><td>2020-10-28 22:52</td><td class="PRIEST">清空购物车</td><td>牧师</td><td>1200.00</td><td>6000.00</td><td><a href="https://cn.classic.wowhead.com/item=21221/">21221 克苏恩之眼</a></td></tr>
+<tr><td>2020-10-28 22:51</td><td class="WARRIOR">德刚</td><td>战士</td><td>448.00</td><td>2240.00</td><td><a href="https://cn.classic.wowhead.com/item=22732/">22732 克苏恩的印记</a></td></tr>
+<tr><td>2020-10-28 22:29</td><td class="WARRIOR">老军医夏雨荷</td><td>战士</td><td>500.00</td><td>1250.00</td><td><a href="https://cn.classic.wowhead.com/item=21685/">21685 石化甲虫</a></td></tr>
+<tr><td>2020-10-28 22:29</td><td class="ROGUE">锻造</td><td>潜行者</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-10-28 22:29</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>3000.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=20932/">20932 其拉统御腕轮</a></td></tr>
+<tr><td>2020-10-28 22:29</td><td class="PRIEST">索罗斯铜须</td><td>牧师</td><td>500.00</td><td>2500.00</td><td><a href="https://cn.classic.wowhead.com/item=21625/">21625 甲虫胸针</a></td></tr>
+<tr><td>2020-10-28 00:06</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>3000.00</td><td>750.00</td><td><a href="https://cn.classic.wowhead.com/item=20932/">20932 其拉统御腕轮</a></td></tr>
+<tr><td>2020-10-28 00:01</td><td class="MAGE">小灰浪</td><td>法师</td><td>600.00</td><td>6000.00</td><td><a href="https://cn.classic.wowhead.com/item=21237/">21237 其拉帝王徽记</a></td></tr>
+<tr><td>2020-10-28 00:01</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20931/">20931 巨型沙虫的皮</a></td></tr>
+<tr><td>2020-10-28 00:01</td><td class="ROGUE">锻造</td><td>潜行者</td><td>4000.00</td><td>2000.00</td><td><a href="https://cn.classic.wowhead.com/item=20927/">20927 奥罗的外皮</a></td></tr>
+<tr><td>2020-10-28 00:00</td><td class="DRUID">变了就挠</td><td>德鲁伊</td><td>4000.00</td><td>1000.00</td><td><a href="https://cn.classic.wowhead.com/item=20930/">20930 维克洛尔的王冠</a></td></tr>
+<tr><td>2020-10-27 22:56</td><td class="PALADIN">萌萌姐姐</td><td>圣骑士</td><td>224.00</td><td>2240.00</td><td><a href="https://cn.classic.wowhead.com/item=21620/">21620 殉难者之戒</a></td></tr>
+<tr><td>2020-10-27 22:55</td><td class="MAGE">破乄冰</td><td>法师</td><td>600.00</td><td>6000.00</td><td><a href="https://cn.classic.wowhead.com/item=21237/">21237 其拉帝王徽记</a></td></tr>
+<tr><td>2020-10-27 22:55</td><td class="ROGUE">咔咪啦</td><td>潜行者</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-10-27 22:55</td><td class="WARRIOR">砖制牛兽</td><td>战士</td><td>224.00</td><td>1120.00</td><td><a href="https://cn.classic.wowhead.com/item=21664/">21664 尖刺颈饰</a></td></tr>
+<tr><td>2020-10-22 00:37</td><td class="WARRIOR">星辰雨蝶</td><td>战士</td><td>424.00</td><td>4243.00</td><td><a href="https://cn.classic.wowhead.com/item=19363/">19363 克鲁索洛克恩，混乱之刃</a></td></tr>
+<tr><td>2020-10-21 23:55</td><td class="ROGUE">鴻霄昊胤</td><td>潜行者</td><td>280.00</td><td>2799.00</td><td><a href="https://cn.classic.wowhead.com/item=19365/">19365 黑龙之爪</a></td></tr>
+<tr><td>2020-10-21 23:31</td><td class="PALADIN">圣光大闸蟹</td><td>圣骑士</td><td>99.00</td><td>495.00</td><td><a href="https://cn.classic.wowhead.com/item=19437/">19437 纯净思想长靴</a></td></tr>
+<tr><td>2020-10-21 22:47</td><td class="ROGUE">锻造</td><td>潜行者</td><td>3000.00</td><td>1500.00</td><td><a href="https://cn.classic.wowhead.com/item=20928/">20928 其拉命令腕轮</a></td></tr>
+<tr><td>2020-10-21 22:28</td><td class="WARLOCK">朗拿度</td><td>术士</td><td>1200.00</td><td>6000.00</td><td><a href="https://cn.classic.wowhead.com/item=21221/">21221 克苏恩之眼</a></td></tr>
+<tr><td>2020-10-21 22:28</td><td class="PRIEST">铁杆汉</td><td>牧师</td><td>1200.00</td><td>12000.00</td><td><a href="https://cn.classic.wowhead.com/item=21582/">21582 上古之神的拥抱</a></td></tr>
+            <tfoot>
+            <tr>
+                <th>时间</th>
+                <th>名字</th>
+                <th>职业</th>
+                <th>物品GP</th>
+                <th>获得GP</th>
+                <th>装备</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    </div>
+
+<script>
+    function selectTab(event, name) {
+        var i, tabcontent, tablinks;
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(name).style.display = "block";
+        if (event) {
+            event.currentTarget.className += " active";
+        }
+    }
+
+    function refreshLink(){
+        if(typeof $WowheadPower == 'undefined'){
+            $.getScript('//wow.zamimg.com/widgets/power.js');
+        } else {
+            $WowheadPower.refreshLinks();
+        }
+    }
+
+
+    $(document).ready(function () {
+        var pointsTable = $('#pointsTable').DataTable({
+            pageLength: 50,
+            order: [ [ 6, 'asc' ] ],
+        });
+        var logsTable = $('#logsTable').DataTable({
+            pageLength: 50,
+            order: [ [ 0, 'desc' ] ],
+        });
+        logsTable.on( 'draw', function () {
+            refreshLink();
+        } );
+
+        selectTab(null, "PointsTab")
+    });
+</script>
+</body>
+</html>
